@@ -1,0 +1,94 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+@import 'blocks/**/*'
+
+body
+    position: relative1
+    width: 100vw
+    height: 100vh
+
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    min-height: 5vh
+    padding: 13px 1.7vw 0 1.7vw
+    z-index: 50
+
+.header-logo
+    display: inline-flex
+    align-items: center
+    margin-left: auto
+
+.logo-text
+    line-height: 1
+    text-shadow: 1px 1px 2px #fff3, -1px -1px 2px #fff3, 1px -1px 2px #fff3, -1px 1px 2px #fff3
+
+@media (max-width: 768.98px) and (orientation: portrait)
+    .header
+        padding-top: 10px
+
+@media (max-width: 768.98px)
+    .header-logo
+        align-items: flex-start
+
+.main
+    width: 100vw
+    height: 100vh
+    padding-top: 12.7vh
+.swiper
+    width: 70%
+    height: 100%
+    &-container
+        height: 70%
+    &-slide
+        width: 30%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+            
+.card
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    text-align: center
+    min-width: 200px
+    &-rating
+        display: flex
+        svg
+            width: 2vh
+            height: 2vh
+    &-items
+    &-price
+        margin-top: auto
+        p
+            &:first-child
+                text-decoration: line-through
+            &:last-child
+                
+    &-solo
+        background-color: #eff0f2
+    &-personal
+        background-color: #c9b493
+        .title, .card-rating
+            color: var(--color-white)
+        
+    &-vip
+        color: #c7ac82
+        background-color: #171a29
+        h2
+            color: var(--color-gold)
+        dd
+            color: var(--color-white)
+        .title
+            color: var(--color-gold)
+    .btn
+@media (min-width: 1024px)
+    .card
+        padding: 5% 5px
+        &-rating
+            margin-bottom: 4vh

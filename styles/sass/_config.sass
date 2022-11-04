@@ -1,0 +1,145 @@
+// USER VARIABLES SECTION
+:root
+    --color-gold: #c5b08f
+    --color-gold: #c9b493
+    --color-gold: #c7ac82
+    --color-white: #ffffff
+    --color-text: #272b4e
+    --color-title: #272b4e
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+// @mixin font($fname, $fstyle, $fweight, $furl)
+//     @font-face
+//         font-family: $fname
+//         font-style: $fstyle
+//         font-weight: $fweight
+//         src: url($furl) format('woff2')
+
+// @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+// @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+// @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+// @include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+    color: #666
+
+::selection
+    background-color: $accent
+    color: #fff
+
+input, textarea
+    outline: none
+    &:focus:required:invalid
+        border-color: red
+    &:required:valid
+        border-color: green
+
+body
+    font-family: 'Open Sans', sans-serif
+    font-size: max(0.82vw, 15.5px)
+    font-weight: 300
+    line-height: 1.65
+    color: var(--color-text)
+    min-width: 320px
+    position: relative
+    overflow-x: hidden
+
+
+h1, h2
+    text-align: center
+    span
+        color: var(--color-gold)
+
+h1
+    font-family: 'Oswald', sans-serif
+    font-size: max(3.37vw, 54px)
+    font-weight: 400
+    line-height: 1
+    margin-bottom: 4vh
+    color: var(--color-title)
+    white-space: pre-line
+
+h2, .title
+    font-family: 'Oswald', sans-serif
+    font-size: max(2.4vw, 47px)
+    font-weight: 400
+    line-height: 1.2
+    margin-bottom: 3vh
+    color: var(--color-title)
+
+@media (max-width: 1279px)
+    h1
+        font-size: max(3.37vw, 45.5px)
+        line-height: 1.1
+        margin-bottom: 3.2vh
+    h2
+        font-size: max(1.6vw, 42px)
+
+@media (max-width: 1023px)
+    h1
+        font-size: 54px
+        margin-bottom: 20px
+    h2
+        font-size: 41px
+        margin-bottom: 30px
+
+@media (max-width: 767px)
+    h2
+        margin-bottom: 34px
+        font-size: 44px
+
+@media (max-width: 768px)
+    h1
+        font-size: 54.5px
+        margin-bottom: 15px
+
+@media (max-width: 476px)
+    h1
+        font-size: 44.5px
+
+@media (max-width: 477px)
+    h2
+        font-size: 38px
+
+a
+    text-decoration: none
+    color: var(--color-text)
+    transition: .3s
+    &:hover
+        color: var(--color-text)
+
+dl
+dd
+    line-height: 1.2
+
+.btn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 64%
+    max-width: 300px
+    background-color: var(--color-gold)
+    @supports (aspect-ratio: 5 / 1)
+        aspect-ratio: 5 / 1
+    @supports not (aspect-ratio: 5 / 1)
+        height: 55px
