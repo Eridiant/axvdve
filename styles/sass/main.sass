@@ -23,52 +23,115 @@ body
     align-items: center
     margin-left: auto
 
-.logo-text
-    line-height: 1
-    text-shadow: 1px 1px 2px #fff3, -1px -1px 2px #fff3, 1px -1px 2px #fff3, -1px 1px 2px #fff3
+.logo
+    &-image img
+        width: 4.1vw
+        height: 4.1vw
+        min-width: 79px
+        min-height: 79px
+    &-text
+        font-family: 'Oswald', sans-serif
+        font-size: max(1.05vw, 20px)
+        font-weight: 200
+        letter-spacing: .02em
+        line-height: 1
+        text-shadow: 1px 1px 2px #fff3, -1px -1px 2px #fff3, 1px -1px 2px #fff3, -1px 1px 2px #fff3
 
 @media (max-width: 768.98px) and (orientation: portrait)
     .header
         padding-top: 10px
 
 @media (max-width: 768.98px)
-    .header-logo
-        align-items: flex-start
+//     .header-logo
+//         align-items: flex-start
 
 .main
     width: 100vw
     height: 100vh
-    padding-top: 12.7vh
+    .lead
+        text-align: center
+        margin-bottom: 10px
+        span
+            color: var(--color-gold)
 .swiper
-    width: 70%
+    width: 100%
     height: 100%
     &-container
         height: 70%
     &-slide
         width: 30%
-        height: 100%
-        display: flex
-        justify-content: center
-        align-items: center
-            
+        height: 95%
+.swiper-horizontal>.swiper-pagination-bullets
+    bottom: -3px
+.swiper-pagination-bullet-active
+    transform: scale(1.4)
+
+@media (min-width: 1024px)
+    .swiper
+        position: absolute
+        top: 0
+        visibility: hidden
+        &-container
+            margin-bottom: 5vh
+    .lead
+        font-family: 'Oswald', sans-serif
+        font-size: max(2.4vw, 47px)
+        font-weight: 400
+@media (max-width: 1023.98px)
+    .logo-text
+        letter-spacing: normal
+        font-size: 18.5px
+    .main
+        h1
+            font-size: 36px
+    .lead
+        font-size: 24px
+        white-space: pre-line
+@media (min-width: 768px)
+    .main
+        h1
+            white-space: pre-line
+
+@media (min-width: 576px)
+    .main
+        h1 br
+            display: none
+@media (max-width: 575.98px)
+    .main
+        h1
+            font-size: 0
+            span.main-mb
+                font-size: 36px
+    .lead
+        white-space: pre-line
+        font-size: 16px
+
 .card
     display: flex
     flex-direction: column
-    justify-content: flex-start
+    align-items: center
     text-align: center
     min-width: 300px
+    user-select: none
+    &-wrapper
+        display: none
     &-rating
         display: flex
         svg
-            width: 2vh
-            height: 2vh
+            width: 1.5vh
+            height: 1.5vh
     &-items
     &-price
         margin-top: auto
         p
-            &:first-child
-                text-decoration: line-through
-            &:last-child
+            font-family: 'Oswald', sans-serif
+        &-old
+            font-size: max(1.27vw, 24px)
+            letter-spacing: 0.03em
+            font-weight: 300
+            margin-bottom: 0
+            text-decoration: line-through
+        .title
                 
     &-solo
         background-color: #eff0f2
@@ -87,8 +150,43 @@ body
         .title
             color: var(--color-gold)
     .btn
-@media (min-width: 1024px)
+        font-family: 'Oswald', sans-serif
+        font-size: max(1.27vw, 25px)
+        font-weight: 400
+    &:first-child .btn
+        &:hover
+            background-color: #eff0f2
+    &:nth-child(even) .btn
+        color: #c5b08f
+        background-color: #1a1d34
+        border: 1px solid #1a1d34
+        &:hover
+            color: #1a1d34
+            background-color: var(--color-gold)
+@media (min-width: 1600px)
+    .main
+        padding-top: 12.7vh
     .card
-        padding: 5% 5px
+        padding: 5% 5px 6% 5px
         &-rating
             margin-bottom: 4vh
+@media (min-width: 1024px)
+    .main
+        padding-top: 7vh
+    .card
+        width: 100%
+        padding: 4% 5px
+        &-rating
+            margin-bottom: 3vh
+        &-wrapper
+            display: flex
+            justify-content: center
+            margin-left: auto
+            margin-right: auto
+            gap: 30px
+            max-width: 79%
+@media (max-width: 1023px)
+    .main
+        padding-top: 50px
+    .card
+        padding: 39px 5px 50px 5px

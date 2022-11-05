@@ -67,7 +67,7 @@ body
 
 h1, h2
     text-align: center
-    span
+    span:not(.main-mb)
         color: var(--color-gold)
 
 h1
@@ -77,7 +77,6 @@ h1
     line-height: 1
     margin-bottom: 4vh
     color: var(--color-title)
-    white-space: pre-line
 
 h2, .title
     font-family: 'Oswald', sans-serif
@@ -86,6 +85,12 @@ h2, .title
     line-height: 1.2
     margin-bottom: 3vh
     color: var(--color-title)
+@media (max-width: 1600px)
+    h1
+        font-size: max(2.4vw, 47px)
+    h2, .title
+        font-size: max(1.33vw, 35px)
+        margin-bottom: 2vh
 
 @media (max-width: 1279px)
     h1
@@ -120,26 +125,49 @@ h2, .title
 @media (max-width: 477px)
     h2
         font-size: 38px
-
 a
+    color: #1a1d34
     text-decoration: none
-    color: var(--color-text)
     transition: .3s
+a:not(.btn)
+    font-family: 'Oswald', sans-serif
+    font-size: max(0.77vw, 14.25px)
+    height: 7.8vh
+    min-height: 73px
+    line-height: 2.6
+    text-decoration: none
+    letter-spacing: .05em
+    color: #bfa883
     &:hover
-        color: var(--color-text)
+        color: #bfa883
+
+p, dd
+    font-family: 'Open Sans', sans-serif
+    font-size: max(0.82vw, 15.5px)
+    font-weight: 300
+    line-height: 1.65
+    color: #727379
 
 dl
 dd
-    line-height: 1.2
+    line-height: 1.05
 
-.btn
+.btn, a.btn
     display: flex
     justify-content: center
     align-items: center
     width: 64%
     max-width: 300px
     background-color: var(--color-gold)
+    border: 1px solid var(--color-gold)
     @supports (aspect-ratio: 5 / 1)
         aspect-ratio: 5 / 1
     @supports not (aspect-ratio: 5 / 1)
         height: 55px
+    &:hover
+        color: var(--color-gold)
+        background-color: #1a1d34
+
+@media (max-width: 1023.98px)
+    .btn
+        max-width: 300px
