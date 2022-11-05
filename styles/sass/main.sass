@@ -118,6 +118,7 @@ body
         display: none
     &-rating
         display: flex
+        gap: 7px
         svg
             width: 1.5vh
             height: 1.5vh
@@ -221,17 +222,23 @@ body
 .vip .svg-star.svg-vip
     display: block
 .modal-wrapper.solo
-        background: #EFF0F240
+    background: #EFF0F240
 .modal-wrapper.personal
-        background: #C9B49350
+    background: #C9B49350
 .modal-wrapper.vip
-        background: #171A2770
+    background: #171A2770
+    .modal-close svg
+        color: var(--color-gold)
+    .modal-tarif
+        color: #ffffff
 
 .modal
     position: relative
     display: flex
     flex-direction: column
     padding: 52px 40px 75px
+    // box-shadow: 0px 0px 25px #fff9
+    filter: drop-shadow(0px 0px 25px #ffffff99)
     &-wrapper
         position: absolute
         top: 0
@@ -249,11 +256,18 @@ body
         display: flex
         flex-direction: column
         align-items: center
+        flex: 1 1 50%
         text-align: center
+        user-select: none
         p
             white-space: pre-line
+    &-part
+        margin-bottom: 0px
+    &-tarif
+        line-height: 1.4
     &-form
         display: none
+        flex: 1 1 50%
     &-close
         position: absolute
         top: 20px
@@ -265,10 +279,67 @@ body
         height: 30px
         cursor: pointer
         z-index: 101
+        // filter: drop-shadow( 1px 1px 2px #eff0f2b3)
         svg
             width: 20px
             height: 20px
+            // filter: drop-shadow( 1px 1px 2px #eff0f2b3)
 @media (max-width: 1023.98px) and (orientation: landscape)
     .modal
         flex-direction: row
+        gap: 20px
         padding: 52px 40px 75px
+@media (min-width: 1024px)
+    .modal
+        h2
+            font-size: max(1.4vw, 38px)
+        &-tarif
+            font-size: max(1vw, 20px)
+        .card
+            &-rating
+                margin-bottom: 2vh
+@media (max-width: 1023.98px)
+    .modal
+        h2
+            font-size: 32px
+
+.modal-form
+    button
+        font-family: Oswald,sans-serif !important
+        font-size: max(1.27vw,25px) !important
+        font-weight: 400 !important
+        color: #272A41 !important
+        background-color: #C9B493 !important
+    a
+        color: #003399 !important
+    .strwf__input-wrapper
+        margin-bottom: 7px !important
+    input[type=checkbox]
+        width: 20px !important
+        height: 20px !important
+        color: #000 !important
+        background-color: #fff !important
+    input[type=checkbox]:checked
+        color: #fff !important
+        background-color: #000 !important
+    &.script
+        &-solo
+            form, input, section
+                background-color: #EFF0F2 !important
+            input, section
+                border-color: #ffffff !important
+        &-personal
+            form, input, section
+                background-color: #C9B493 !important
+            input
+                border-color: #272A41 !important
+            button
+                color: #C9B493  !important
+                background-color: #272A41 !important
+        &-vip
+            form, input, section, select, label
+                color: #ffffff !important
+                background-color: #171A27 !important
+            input
+                border-color: #FFFFFF !important
+

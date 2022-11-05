@@ -16,8 +16,8 @@
     </symbol>
     <symbol id="cross" width="100%" height="100%" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g>
-            <rect width="28" height="2" rx="1" transform="matrix(0.707108 0.707106 -0.707108 0.707106 1.60669 0.192383)" fill="#727379"/>
-            <rect width="28" height="2" rx="1" transform="matrix(-0.707108 0.707106 -0.707107 -0.707106 21.4058 1.60657)" fill="#727379"/>
+            <rect width="28" height="2" rx="1" transform="matrix(0.707108 0.707106 -0.707108 0.707106 1.60669 0.192383)" fill="currentColor"/>
+            <rect width="28" height="2" rx="1" transform="matrix(-0.707108 0.707106 -0.707107 -0.707106 21.4058 1.60657)" fill="currentColor"/>
         </g>
     </symbol>
 </svg>
