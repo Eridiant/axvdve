@@ -44,7 +44,7 @@
         в условиях дефицита <span>времени и сил</span></h1>
     <div class="swiper-container">
         <div class="card-wrapper">
-            <div class="card card-solo">
+            <div class="card card-solo" data-card="solo" data-price="7.450 ₽" data-tarif="Самостоятельный">
                 <h2>Самостоятельный</h2>
                 <div class="card-rating">
                     <svg><use xlink:href="images/icon.svg#fill"></use></svg>
@@ -69,7 +69,7 @@
                 </div> -->
                 <a href="#" class="btn">ВЫПИСАТЬ СЧЕТ</a>
             </div>
-            <div class="card card-personal">
+            <div class="card card-personal" data-card="personal" data-price="12.450 ₽" data-tarif="Персональный">
                 <h2>Персональный</h2>
                 <div class="card-rating">
                     <svg><use xlink:href="images/icon.svg#fill"></use></svg>
@@ -94,7 +94,7 @@
                 </div> -->
                 <a href="#" class="btn">ВЫПИСАТЬ СЧЕТ</a>
             </div>
-            <div class="card card-vip">
+            <div class="card card-vip" data-card="vip" data-price="32.450 ₽" data-tarif="VIP">
                 <h2>VIP</h2>
                 <div class="card-rating">
                     <svg><use xlink:href="images/icon.svg#fill"></use></svg>
@@ -112,8 +112,8 @@
                     <dd>4 ч индивидуально по скайпу</dd>
                 </dl>
                 <div class="card-price">
-                    <p class="card-price-old">19.700 ₽</p>
-                    <p class="title">12.450 ₽</p>
+                    <p class="card-price-old">39.700</p>
+                    <p class="title">32.450 ₽</p>
                 </div>
                 <!-- <div>
                     <script id="form-635fccdb416e8f4770000175" type="text/javascript" src="https://api.siter.justclick.ru/web_forms/635fccdb416e8f4770000175/form_loader.js?cid=form-635fccdb416e8f4770000175"></script>
@@ -123,7 +123,7 @@
         </div>
         <div class="swiper mySwiper" style="--swiper-pagination-color: #727379; --swiper-pagination-bullet-inactive-color: #727379; --swiper-pagination-bullet-inactive-opacity: 1">
             <div class="swiper-wrapper">
-                <div class="swiper-slide card card-personal">
+                <div class="swiper-slide card card-personal" data-card="personal" data-price="12.450 ₽" data-tarif="Персональный">
                     <h2>Персональный</h2>
                     <div class="card-rating">
                         <svg><use xlink:href="images/icon.svg#fill"></use></svg>
@@ -148,7 +148,7 @@
                     </div> -->
                     <a href="#" class="btn">ВЫПИСАТЬ СЧЕТ</a>
                 </div>
-                <div class="swiper-slide card card-vip">
+                <div class="swiper-slide card card-vip" data-card="vip" data-price="32.450 ₽" data-tarif="VIP">
                     <h2>VIP</h2>
                     <div class="card-rating">
                         <svg><use xlink:href="images/icon.svg#fill"></use></svg>
@@ -166,15 +166,15 @@
                         <dd>4 ч индивидуально по скайпу</dd>
                     </dl>
                     <div class="card-price">
-                        <p class="card-price-old">19.700 ₽</p>
-                        <p class="title">12.450 ₽</p>
+                        <p class="card-price-old">39.700 ₽</p>
+                        <p class="title">32.450 ₽</p>
                     </div>
                     <!-- <div>
                         <script id="form-635fccdb416e8f4770000175" type="text/javascript" src="https://api.siter.justclick.ru/web_forms/635fccdb416e8f4770000175/form_loader.js?cid=form-635fccdb416e8f4770000175"></script>
                     </div> -->
                     <a href="#" class="btn">ВЫПИСАТЬ СЧЕТ</a>
                 </div>
-                <div class="swiper-slide card card-solo">
+                <div class="swiper-slide card card-solo" data-card="solo" data-price="7.450 ₽" data-tarif="Самостоятельный">
                     <h2>Самостоятельный</h2>
                     <div class="card-rating">
                         <svg><use xlink:href="images/icon.svg#fill"></use></svg>
@@ -207,6 +207,34 @@
         <span>00 дн. 22 ч. 37 мин. и 16 сек.</span></p>
 </main>
 
+<div class="modal-wrapper">
+    <div class="modal">
+        <div class="modal-desc">
+            <h3>Курс в новую жизнь</h3>
+            <div class="card-rating">
+                <svg><use xlink:href="images/icon.svg#fill"></use></svg>
+                <svg><use xlink:href="images/icon.svg#fill"></use></svg>
+                <svg><use xlink:href="images/icon.svg#fill"></use></svg>
+                <svg><use xlink:href="images/icon.svg#fill"></use></svg>
+                <svg><use xlink:href="images/icon.svg#fill"></use></svg>
+            </div>
+            <h3>Часть 1</h3>
+            <p>Тариф «<span class="tarif">Самостоятельный</span>»
+                Сумма к оплате:</p>
+            <div class="card-price">
+                <p class="title">10.700 ₽</p>
+            </div>
+        </div>
+        <div class="modal-form">
+            <script id="form-635fc9c6416e8f46e10000bd" type="text/javascript" src="https://api.siter.justclick.ru/web_forms/635fc9c6416e8f46e10000bd/form_loader.js?cid=form-635fc9c6416e8f46e10000bd"></script>
+        </div>
+        <div class="modal-close">
+            <svg><use xlink:href="images/icon.svg#cross"></use></svg>
+        </div>
+    </div>
+</div>
+
+    <link rel="stylesheet" href="css/app.min.css">
 	<!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="js/app.min.js"></script>

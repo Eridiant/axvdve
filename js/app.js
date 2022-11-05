@@ -13,6 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    let cardBtn = document.querySelector('.swiper-container');
+    let modal = document.querySelector('.modal-wrapper');
+
+    cardBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let target = e.target;
+        if (target.closest('.btn')) {
+            modal.classList.add(`${target.closest('.card').dataset.card}`);
+            document.querySelector('.tarif').innerHTML = target.closest('.card').dataset.tarif;
+            document.querySelector('.modal .title').innerHTML = target.closest('.card').dataset.price;
+        }
+    })
+
+    modal.addEventListener('click', (e) => {
+        let target = e.target;
+        if (target.closest('.modal-close') || !target.closest('.modal')) {
+            modal.className = 'modal-wrapper';
+        }
+    })
+
 })
 
 
