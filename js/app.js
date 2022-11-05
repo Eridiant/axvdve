@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add(`${target.closest('.card').dataset.card}`);
             document.querySelector('.tarif').innerHTML = target.closest('.card').dataset.tarif;
             document.querySelector('.modal .title').innerHTML = target.closest('.card').dataset.price;
+            document.querySelector('.modal-desc').classList.add(`card-${target.closest('.card').dataset.card}`);
             // if (target.closest('.card').dataset.card == 'solo') {
             //     document.querySelector('.modal-form').innerHTML = '';
             // }
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let target = e.target;
         if (target.closest('.modal-close') || !target.closest('.modal')) {
             modal.className = 'modal-wrapper';
+            document.querySelector('.modal-desc').className = 'modal-desc';
         }
     })
 
