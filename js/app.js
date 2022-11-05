@@ -23,6 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add(`${target.closest('.card').dataset.card}`);
             document.querySelector('.tarif').innerHTML = target.closest('.card').dataset.tarif;
             document.querySelector('.modal .title').innerHTML = target.closest('.card').dataset.price;
+            // if (target.closest('.card').dataset.card == 'solo') {
+            //     document.querySelector('.modal-form').innerHTML = '';
+            // }
+            // if (target.closest('.card').dataset.card == 'personal') {
+            //     document.querySelector('.modal-form').innerHTML = '';
+            // }
+            // if (target.closest('.card').dataset.card == 'vip') {
+            //     document.querySelector('.modal-form').innerHTML = '';
+            // }
         }
     })
 

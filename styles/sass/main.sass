@@ -202,7 +202,16 @@ body
 .modal-wrapper.vip,
 .modal-wrapper.personal
     display: flex
-
+.solo .modal-form.script-solo,
+.personal .modal-form.script-personal,
+.vip .modal-form.script-vip
+    display: block
+.svg-star
+    display: none
+.solo .svg-star.svg-solo,
+.personal .svg-star.svg-personal,
+.vip .svg-star.svg-vip
+    display: block
 .modal
     position: relative
     display: flex
@@ -228,6 +237,7 @@ body
         p
             white-space: pre-line
     &-form
+        display: none
     &-close
         position: absolute
         top: 20px
