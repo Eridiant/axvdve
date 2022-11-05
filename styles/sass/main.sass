@@ -202,10 +202,18 @@ body
 .modal-wrapper.vip,
 .modal-wrapper.personal
     display: flex
+    opacity: 1
+    animation: slidein .5s ease 1
+@keyframes slidein
+    from
+        opacity: 0
+    to
+        opacity: 1
 .solo .modal-form.script-solo,
 .personal .modal-form.script-personal,
 .vip .modal-form.script-vip
     display: block
+
 .svg-star
     display: none
 .solo .svg-star.svg-solo,
@@ -229,6 +237,8 @@ body
         top: 0
         left: 0
         display: none
+        opacity: 0
+        transition: .5s
         justify-content: center
         align-items: center
         width: 100vw
