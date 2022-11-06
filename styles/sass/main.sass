@@ -178,8 +178,36 @@ body
     .main
         padding-top: 7vh
     .card
+        position: relative
         width: 100%
         padding: 4% 5px
+        transition: .3s
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 95%
+            height: 95%
+            border-radius: 25%
+            transition: .3s
+            z-index: -1
+        &:hover
+            transform: translateY(-5px)
+        &.card
+            &-solo
+                &:hover
+                    &::before
+                        box-shadow: 0px 0px 50px #EFF0F2FF
+            &-personal
+                &:hover
+                    &::before
+                        box-shadow: 0px 0px 50px #C9B49390
+            &-vip
+                &:hover
+                    &::before
+                        box-shadow: 0px 0px 50px #171A2730
         &-rating
             margin-bottom: 3vh
         &-wrapper
