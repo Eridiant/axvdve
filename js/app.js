@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         modal.className = 'modal-wrapper';
         document.querySelector('.modal-desc').className = 'modal-desc';
-    })
+    }, false)
 
 })
 
