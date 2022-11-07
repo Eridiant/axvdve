@@ -11,7 +11,34 @@ document.addEventListener('DOMContentLoaded', () => {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+            },
+            300: {
+                spaceBetween: 300,
+            },
+        },
     });
+
+    var passiveSupported = false;
+
+    try {
+        var options = Object.defineProperty({}, "passive", {
+            get: function() {
+            passiveSupported = true;
+            }
+        });
+
+        window.addEventListener("resize", (e) => {
+
+            if (document.documentElement.clientWidth > 767) {
+                swiper.slideTo(2);
+            } else {
+                swiper.slideTo(0);
+            }
+        }, options);
+    } catch(err) {}
 
     let cardBtn = document.querySelector('.swiper-container');
     let modal = document.querySelector('.modal-wrapper');
