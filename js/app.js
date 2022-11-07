@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     document.addEventListener('backbutton', (e) => {
+        e.preventDefault();
         modal.className = 'modal-wrapper';
         document.querySelector('.modal-desc').className = 'modal-desc';
     })
