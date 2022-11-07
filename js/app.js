@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target.closest('.btn')) {
             modal.classList.add(`${target.closest('.card').dataset.card}`);
             document.querySelector('.tarif').innerHTML = target.closest('.card').dataset.tarif;
-            document.querySelector('.modal .title').innerHTML = target.closest('.card').dataset.price;
+            document.querySelector('.modal .title').innerHTML = target.closest('.card').querySelector('.title').innerHTML;
+            document.querySelector('.modal .card-price-old').innerHTML = target.closest('.card').querySelector('.card-price-old').innerHTML;
             document.querySelector('.modal-desc').classList.add(`card-${target.closest('.card').dataset.card}`);
             // if (target.closest('.card').dataset.card == 'solo') {
             //     document.querySelector('.modal-form').innerHTML = '';
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modal.addEventListener('click', (e) => {
         let target = e.target;
-        if (target.closest('.modal-close') || !target.closest('.modal')) {
+        if (target.closest('.modal-close') || !target.closest('.modal-inner')) {
             modal.className = 'modal-wrapper';
             document.querySelector('.modal-desc').className = 'modal-desc';
         }
