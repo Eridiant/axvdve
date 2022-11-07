@@ -45,6 +45,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    document.addEventListener('keyup', (e) => {
+        console.log(e.key);
+        if (e.key == "Escape") {
+            modal.className = 'modal-wrapper';
+            document.querySelector('.modal-desc').className = 'modal-desc';
+        }
+    })
+
+    document.addEventListener('backbutton', (e) => {
+        modal.className = 'modal-wrapper';
+        document.querySelector('.modal-desc').className = 'modal-desc';
+    })
+
 })
 
 
