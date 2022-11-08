@@ -48,9 +48,9 @@ body
 
 .tariff
     display: flex
+    flex-direction: column
     justify-content: center
     align-items: center
-    flex-wrap: wrap
     width: 100%
     height: 100%
     .lead
@@ -139,10 +139,13 @@ body
     width: 100%
     height: 100%
     &-container
-        height: 70%
+        width: 100%
+        max-width: 100%
+    &-wrapper
+        height: auto
     &-slide
         width: 30%
-        height: 95%
+        height: auto
 .swiper-horizontal>.swiper-pagination-bullets
     bottom: -3px
 .swiper-pagination-bullet-active
@@ -194,9 +197,8 @@ body
     align-items: center
     text-align: center
     width: 100%
-    min-width: 300px
     max-width: 22vw
-    user-select: none
+    min-width: 320px
     &-wrapper
         display: none
     &-rating
@@ -218,7 +220,6 @@ body
             margin-bottom: 0
             text-decoration: line-through
         .title
-                
     &-solo
         background-color: #eff0f2
     &-personal
@@ -237,13 +238,7 @@ body
             color: var(--color-gold)
     .btn
         width: 64%
-    //     font-family: 'Oswald', sans-serif
-    //     font-size: max(1.27vw, 25px)
-    //     font-weight: 400
-    &:first-child .btn
-        &:hover
-            // background-color: #eff0f2
-    &:nth-child(even) .btn
+    &.card-personal .btn
         color: #c5b08f
         background-color: #1a1d34
         // border: 1px solid #1a1d34
@@ -275,8 +270,9 @@ body
     .card
         position: relative
         width: 100%
-        padding: 4% 5px
+        padding: 4% 20px
         transition: .3s
+        user-select: none
         // &::before
         //     content: ''
         //     position: absolute
@@ -307,7 +303,7 @@ body
             margin-left: auto
             margin-right: auto
             gap: 20px
-            max-width: 79%
+            // min-width: 1000px
 @media (max-width: 1199.98px)
     .card
         &-rating

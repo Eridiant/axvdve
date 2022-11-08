@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	var swiper = new Swiper(".mySwiper", {
         slidesPerView: "auto",
         centeredSlides: true,
+        // autoHeight: true,
         loop: true,
         spaceBetween: 30,
         // dynamicBullets: true,
