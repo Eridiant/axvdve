@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         centeredSlides: true,
         loop: true,
         spaceBetween: 30,
-        dynamicBullets: true,
-        watchOverflow: true,
+        // dynamicBullets: true,
+        // watchOverflow: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 swiper.slideTo(0);
             }
         }, options);
-    } catch(err) {}
+    } catch(err) {console.log(err);}
 
     let cardBtn = document.querySelector('.swiper-container');
     let modal = document.querySelector('.modal-wrapper');
@@ -52,15 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.modal .title').innerHTML = target.closest('.card').querySelector('.title').innerHTML;
             document.querySelector('.modal-desc').classList.add(`card-${target.closest('.card').dataset.card}`);
             document.querySelector('.modal .card-price-old').innerHTML = target.closest('.card')?.querySelector('.card-price-old')?.innerHTML;
-            // if (target.closest('.card').dataset.card == 'solo') {
-            //     document.querySelector('.modal-form').innerHTML = '';
-            // }
-            // if (target.closest('.card').dataset.card == 'personal') {
-            //     document.querySelector('.modal-form').innerHTML = '';
-            // }
-            // if (target.closest('.card').dataset.card == 'vip') {
-            //     document.querySelector('.modal-form').innerHTML = '';
-            // }
         }
     })
 
@@ -80,46 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    // document.addEventListener('backbutton', (e) => {
-    //     e.preventDefault();
-    //     modal.className = 'modal-wrapper';
-    //     document.querySelector('.modal-desc').className = 'modal-desc';
-    // }, false)
-
 })
-
-
-
-
-
-// function windowWidth() {
-//     if (document.documentElement.clientWidth > 1200) {
-//         swiperSwitcher(0);
-//     } else {
-//         swiperSwitcher(1);
-//     }
-// }
-
-// let mm;
-// function swiperSwitcher(sw) {
-//     if (mm == sw) return;
-//     console.log(sw);
-//     mm = sw;
-//     if (sw) {
-//         swiper.params.allowTouchMove = true;
-//         console.log('true');
-//     } else {
-//         swiper.params.allowTouchMove = false;
-//         console.log('false');
-//     }
-//     swiper.update();
-// }
-
-// window.addEventListener('load', function() {
-//     windowWidth();
-// });
-
-// window.addEventListener('resize', function() {
-//     windowWidth();
-// });
 
