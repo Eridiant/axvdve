@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener("resize", (e) => {
 
             if (document.documentElement.clientWidth > 767) {
-                swiper.slideTo(2);
-            } else {
                 swiper.slideTo(0);
+            } else {
+                swiper.slideTo(2);
             }
         }, options);
     } catch(err) {console.log(err);}
