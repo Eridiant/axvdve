@@ -115,15 +115,13 @@ body
         .modal .title
             font-size: 29px
     .tariff
-        padding-top: 50px
+        padding-top: 0
 
 @media (max-width: 767px)
     .tariff, .modal-wrapper
         h3
             margin-bottom: 34px
             font-size: 44px
-    .tariff
-        padding-top: 0
 
 @media (max-width: 476px)
     // h2
@@ -352,7 +350,7 @@ body
     background: #171A2770
     .modal-close svg
         color: var(--color-gold)
-    .modal-tarif, .modal-offer, .card-price-old
+    .modal-rate, .modal-offer, .card-price-old
         color: #ffffff
 
 .modal
@@ -400,7 +398,7 @@ body
             white-space: pre-line
     &-part
         margin-bottom: 0px
-    &-tarif
+    &-rate
         line-height: 1.4
     &-form
         display: none
@@ -455,7 +453,7 @@ body
             justify-content: center
             flex-basis: 100%
             flex-grow: 1
-        &-tarif
+        &-rate
             font-size: max(1vw, 20px)
         .card
             &-rating
@@ -486,7 +484,9 @@ body
             background: #C9B493
         &.vip
             background: #171A27
-
+@media (max-width: 767.98px) and (orientation: landscape)
+    .modal
+        align-items: center
 .modal-form
     button
         font-family: Oswald,sans-serif !important
