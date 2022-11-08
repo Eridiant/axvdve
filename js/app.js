@@ -2,20 +2,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	
 
-    var passiveSupported = false;
+    // var passiveSupported = false;
 
-    try {
-        var options = Object.defineProperty({}, "passive", {
-            get: function() {
-            passiveSupported = true;
-            }
-        });
+    // try {
+    //     var options = Object.defineProperty({}, "passive", {
+    //         get: function() {
+    //         passiveSupported = true;
+    //         }
+    //     });
 
-        window.addEventListener("resize", (e) => {
-            swSlideTo();
-        }, options);
-    } catch(err) {console.log(err);}
+    //     window.addEventListener("resize", (e) => {
+    //         swSlideTo();
+    //     }, options);
+    // } catch(err) {console.log(err);}
 
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        // autoHeight: true,
+        loop: true,
+        spaceBetween: 30,
+        // dynamicBullets: true,
+        // watchOverflow: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 30,
+                initialSlide: 0,
+            },
+            300: {
+                spaceBetween: 300,
+                initialSlide: 2,
+            },
+        },
+    });
 
     let cardBtn = document.querySelector('.swiper-container');
     let modal = document.querySelector('.modal-wrapper');
@@ -49,36 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-    // autoHeight: true,
-    loop: true,
-    spaceBetween: 30,
-    // dynamicBullets: true,
-    // watchOverflow: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        768: {
-            spaceBetween: 30,
-        },
-        300: {
-            spaceBetween: 300,
-        },
-    },
-});
-window.addEventListener('load', () => {
-    swSlideTo();
-})
+// window.addEventListener('load', () => {
+//     swSlideTo();
+// })
 
-function swSlideTo() {
-    console.log('swSlideTo');
-    if (document.documentElement.clientWidth > 767) {
-        swiper.slideTo(0);
-    } else {
-        swiper.slideTo(2);
-    }
-}
+// function swSlideTo() {
+//     console.log('swSlideTo');
+//     if (document.documentElement.clientWidth > 767) {
+//         swiper.slideTo(0);
+//     } else {
+//         swiper.slideTo(2);
+//     }
+// }
