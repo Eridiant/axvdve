@@ -334,6 +334,7 @@ body
     display: flex
     opacity: 1
     animation: slidein .5s ease 1
+    animation-fill-mode: forwards
 @keyframes slidein
     from
         opacity: 0
@@ -524,16 +525,14 @@ body
         &-wrapper
             .desktop
                 display: none
-@media (max-width: 1023.98px) and (min-width: 768px)
-    .modal
-        filter: drop-shadow(0px 0px 25px #ffffff99)
+@media (max-width: 1023.98px)
     .modal-wrapper
         &.solo
-            background: #eff0f2
+            background-color: var(--color-card-silver)
         &.personal
-            background: var(--color-card-gold-bg)
+            background-color: var(--color-card-gold-bg)
         &.vip
-            background: var(--color-card-black)
+            background-color: var(--color-card-black)
 @media (max-width: 767.98px) and (orientation: landscape)
     .modal
         align-items: center
