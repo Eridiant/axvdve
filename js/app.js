@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.rate').innerHTML =  target.closest('.card').querySelector('h3').innerHTML;
             document.querySelector('.modal .value').innerHTML = target.closest('.card').querySelector('.value').innerHTML;
             document.querySelector('.modal-desc').classList.add(`card-${target.closest('.card').dataset.card}`);
-            document.querySelector('.modal .card-price-old').innerHTML = target.closest('.card')?.querySelector('.card-price-old')?.innerHTML;
+            document.querySelector('.modal .card-price-old').innerHTML = target.closest('.card').querySelector('.card-price-old').innerHTML;
         }
     })
 

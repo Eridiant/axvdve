@@ -227,15 +227,16 @@ body
         .value, .card-rating
             color: var(--color-white)
         
-    &-vip.card, &-vip.modal-desc
-        color: var(--color-gold)
-        background-color: #171a29
-        h3
+    &-vip
+        &.card, &.modal-desc
             color: var(--color-gold)
-        dd
-            color: var(--color-white)
-        .value
-            color: var(--color-gold)
+            background-color: var(--color-card-black)
+            h3
+                color: var(--color-gold)
+            dd
+                color: var(--color-white)
+            .value
+                color: var(--color-gold)
     .btn
         width: 64%
     &.card-personal .btn
@@ -322,16 +323,6 @@ body
 .personal .svg-star.svg-personal,
 .vip .svg-star.svg-vip
     display: block
-.modal-wrapper.solo
-    background: #EFF0F240
-.modal-wrapper.personal
-    background: var(--color-gold-tr)
-.modal-wrapper.vip
-    background: #171A2770
-    .modal-close svg
-        color: var(--color-gold)
-    .modal-rate, .modal-offer, .card-price-old
-        color: #ffffff
 
 .modal
     position: relative
@@ -365,6 +356,16 @@ body
             max-width: none
         .card-vip p
             color: var(--color-white)
+        &.solo
+            background: #EFF0F240
+        &.personal
+            background: var(--color-gold-tr)
+        &.vip
+            background: var(--color-card-black)
+            .modal-close svg
+                color: var(--color-gold)
+            .modal-rate, .modal-offer, .card-price-old
+                color: #ffffff
     &-inner
         ul, li
             margin-left: 0
@@ -467,11 +468,11 @@ body
 @media (max-width: 767.98px)
     .modal-wrapper
         &.solo
-            background: #EFF0F2
+            background: #eff0f2
         &.personal
             background: var(--color-gold)
         &.vip
-            background: #171A27
+            background: var(--color-card-black)
 @media (max-width: 767.98px) and (orientation: landscape)
     .modal
         align-items: center
