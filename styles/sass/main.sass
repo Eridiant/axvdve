@@ -422,8 +422,6 @@ body
                 color: var(--color-title)
         &.vip
             background: var(--color-card-black)
-            .modal-close svg
-                color: var(--color-gold)
             .modal-rate, .modal-offer
                 color: #ffffff
             .card-price-old
@@ -471,6 +469,7 @@ body
         svg
             width: 20px
             height: 20px
+            color: #666666
 @media (max-width: 1023.98px) and (min-width: 590px) and (orientation: landscape)
     .modal
         flex-direction: row
@@ -482,7 +481,7 @@ body
         margin-top: -15px
         margin-bottom: -15px
         margin-right: 15px
-        flex-basis: 3 1 30%
+        flex-basis: 3 0 40%
         h3
             font-size: max(1.4vw, 38px)
         &-wrapper
@@ -503,7 +502,7 @@ body
             display: none
             flex-direction: column
             justify-content: center
-            flex: 1 2 60%
+            flex: 1 1 55%
         &-rate
             font-size: max(1vw, 20px)
         .card
