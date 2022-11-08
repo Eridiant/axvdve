@@ -67,7 +67,7 @@ body
             color: var(--color-gold)
         span.tariff-mb
             color: #272b4e
-    h3, .title
+    h3, .value
         font-family: 'Oswald', sans-serif
         font-size: max(2.4vw, 47px)
         font-weight: 400
@@ -85,7 +85,7 @@ body
     // h2
     //     font-size: max(2.4vw, 47px)
     .tariff, .modal-wrapper
-        h3, .title
+        h3, .value
             font-size: max(1.33vw, 35px)
             margin-bottom: 2vh
         h4
@@ -94,7 +94,7 @@ body
 
 @media (min-width: 1024px)
     .modal-wrapper .modal
-        .title
+        .value
             font-size: max(1.33vw, 35px)
     // h2
     //     font-size: max(3.37vw, 45.5px)
@@ -112,8 +112,8 @@ body
         h3
             font-size: 41px
             margin-bottom: 30px
-        .modal .title
-            font-size: 29px
+        .modal .value, .card .value
+            font-size: 30px
     .tariff
         padding-top: 10px
 
@@ -215,12 +215,12 @@ body
             font-weight: 300
             margin-bottom: 0
             text-decoration: line-through
-        .title
+        .value
     &-solo
         background-color: #eff0f2
     &-personal
         background-color: #c9b493
-        .title, .card-rating
+        .value, .card-rating
             color: var(--color-white)
         
     &-vip.card, &-vip.modal-desc
@@ -230,7 +230,7 @@ body
             color: var(--color-gold)
         dd
             color: var(--color-white)
-        .title
+        .value
             color: var(--color-gold)
     .btn
         width: 64%
@@ -371,7 +371,7 @@ body
         height: 100vh
         backdrop-filter: blur(9px)
         z-index: 100
-        h3, .title
+        h3, .value
             font-family: 'Oswald', sans-serif
             font-size: max(2.4vw, 47px)
             font-weight: 400
@@ -380,6 +380,8 @@ body
             color: var(--color-title)
         .modal
             max-width: none
+        .card-vip p
+            color: var(--color-white)
     &-inner
         ul, li
             margin-left: 0
@@ -400,6 +402,9 @@ body
         margin-bottom: 0px
     &-rate
         line-height: 1.4
+        margin-bottom: 10px
+        p
+            margin-bottom: 0
     &-form
         display: none
         flex: 1 1 50%

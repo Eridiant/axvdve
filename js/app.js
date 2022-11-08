@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (target.closest('.btn')) {
             modal.classList.add(`${target.closest('.card').dataset.card}`);
             document.querySelector('.rate').innerHTML =  target.closest('.card').querySelector('h3').innerHTML;
-            document.querySelector('.modal .title').innerHTML = target.closest('.card').querySelector('.title').innerHTML;
+            document.querySelector('.modal .value').innerHTML = target.closest('.card').querySelector('.value').innerHTML;
             document.querySelector('.modal-desc').classList.add(`card-${target.closest('.card').dataset.card}`);
             document.querySelector('.modal .card-price-old').innerHTML = target.closest('.card')?.querySelector('.card-price-old')?.innerHTML;
         }
