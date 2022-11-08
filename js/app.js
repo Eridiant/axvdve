@@ -1,26 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-	var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        // autoHeight: true,
-        loop: true,
-        spaceBetween: 30,
-        // dynamicBullets: true,
-        // watchOverflow: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                spaceBetween: 30,
-            },
-            300: {
-                spaceBetween: 300,
-            },
-        },
-    });
+	
 
     var passiveSupported = false;
 
@@ -32,14 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         window.addEventListener("resize", (e) => {
-
-            if (document.documentElement.clientWidth > 767) {
-                swiper.slideTo(0);
-            } else {
-                swiper.slideTo(2);
-            }
+            swSlideTo();
         }, options);
     } catch(err) {console.log(err);}
+
 
     let cardBtn = document.querySelector('.swiper-container');
     let modal = document.querySelector('.modal-wrapper');
@@ -73,4 +49,36 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    // autoHeight: true,
+    loop: true,
+    spaceBetween: 30,
+    // dynamicBullets: true,
+    // watchOverflow: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            spaceBetween: 30,
+        },
+        300: {
+            spaceBetween: 300,
+        },
+    },
+});
+window.addEventListener('load', () => {
+    swSlideTo();
+})
 
+function swSlideTo() {
+    console.log('swSlideTo');
+    if (document.documentElement.clientWidth > 767) {
+        swiper.slideTo(0);
+    } else {
+        swiper.slideTo(2);
+    }
+}
