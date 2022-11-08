@@ -52,8 +52,6 @@ body
     align-items: center
     width: 100%
     // height: 100%
-    // &::-webkit-scrollbar
-    //     display: none
     .lead
         letter-spacing: .01em
         text-align: center
@@ -105,7 +103,9 @@ body
     .tariff, .modal-wrapper
         h3
             font-size: max(1.6vw, 42px)
-
+@media (min-width: 768px) and (min-height: 768px)
+    .tariff
+        height: 100%
 @media (max-width: 1023px)
     // h2
     //     font-size: 54px
