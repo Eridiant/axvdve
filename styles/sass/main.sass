@@ -122,6 +122,10 @@ body
         h3
             margin-bottom: 34px
             font-size: 44px
+    .tariff
+        width: 90%
+        margin-left: auto
+        margin-right: auto
 
 @media (max-width: 476px)
     // h2
@@ -219,12 +223,12 @@ body
     &-solo
         background-color: #eff0f2
     &-personal
-        background-color: #c9b493
+        background-color: var(--color-gold)
         .value, .card-rating
             color: var(--color-white)
         
     &-vip.card, &-vip.modal-desc
-        color: #c7ac82
+        color: var(--color-gold)
         background-color: #171a29
         h3
             color: var(--color-gold)
@@ -235,7 +239,7 @@ body
     .btn
         width: 64%
     &.card-personal .btn
-        color: #c5b08f
+        color: var(--color-gold)
         background-color: #1a1d34
         // border: 1px solid #1a1d34
         &:hover
@@ -269,30 +273,6 @@ body
         padding: 4% 20px
         transition: .3s
         user-select: none
-        // &::before
-        //     content: ''
-        //     position: absolute
-        //     top: 50%
-        //     left: 50%
-        //     transform: translate(-50%, -50%)
-        //     width: 95%
-        //     height: 95%
-        //     border-radius: 25%
-        //     transition: .3s
-        //     z-index: -1
-        // &.card
-        //     &-solo
-        //         &:hover
-        //             &::before
-        //                 box-shadow: 0px 0px 50px #EFF0F2FF
-        //     &-personal
-        //         &:hover
-        //             &::before
-        //                 box-shadow: 0px 0px 50px #C9B49390
-        //     &-vip
-        //         &:hover
-        //             &::before
-        //                 box-shadow: 0px 0px 50px #171A2730
         &-wrapper
             display: flex
             justify-content: center
@@ -317,7 +297,7 @@ body
 .solo .modal
     background-color: #EFF0F2
 .personal .modal
-    background-color: #C9B493
+    background-color: var(--color-gold)
 .vip .modal
     background-color: #171A27
 .modal-wrapper.solo,
@@ -345,7 +325,7 @@ body
 .modal-wrapper.solo
     background: #EFF0F240
 .modal-wrapper.personal
-    background: #C9B49350
+    background: var(--color-gold-tr)
 .modal-wrapper.vip
     background: #171A2770
     .modal-close svg
@@ -369,6 +349,7 @@ body
         align-items: center
         width: 100vw
         height: 100vh
+        color: var(--color-text-black)
         backdrop-filter: blur(9px)
         z-index: 100
         h3, .value
@@ -378,6 +359,8 @@ body
             line-height: 1.2
             margin-bottom: 3vh
             color: var(--color-title)
+            span
+                color: var(--color-gold)
         .modal
             max-width: none
         .card-vip p
@@ -486,7 +469,7 @@ body
         &.solo
             background: #EFF0F2
         &.personal
-            background: #C9B493
+            background: var(--color-gold)
         &.vip
             background: #171A27
 @media (max-width: 767.98px) and (orientation: landscape)
@@ -498,7 +481,7 @@ body
         font-size: max(1.27vw,25px) !important
         font-weight: 400 !important
         color: #272A41 !important
-        background-color: #C9B493 !important
+        background-color: var(--color-gold) !important
     a
         color: #003399 !important
     .strwf__input-wrapper
@@ -519,11 +502,11 @@ body
                 border-color: #ffffff !important
         &-personal
             form, input, section
-                background-color: #C9B493 !important
+                background-color: var(--color-gold) !important
             input
                 border-color: #272A41 !important
             button
-                color: #C9B493  !important
+                color: var(--color-gold)  !important
                 background-color: #272A41 !important
         &-vip
             form, input, section, select, label
