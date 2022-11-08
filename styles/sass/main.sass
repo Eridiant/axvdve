@@ -8,7 +8,7 @@ body
     position: relative1
     width: 100vw
     height: 100vh
-    min-height: 750px
+    min-height: 650px
 
 .header
     position: fixed
@@ -18,11 +18,10 @@ body
     min-height: 5vh
     padding: 13px 1.7vw 0 1.7vw
     z-index: 50
-
-.header-logo
-    display: inline-flex
-    align-items: center
-    margin-left: auto
+    &-logo
+        display: inline-flex
+        align-items: center
+        margin-left: auto
 
 .logo
     &-image img
@@ -43,8 +42,8 @@ body
         padding-top: 10px
 
 @media (max-width: 768.98px)
-//     .header-logo
-//         align-items: flex-start
+    .logo-tariff
+        display: none
 
 .tariff
     display: flex
@@ -115,17 +114,16 @@ body
             margin-bottom: 30px
         .modal .title
             font-size: 29px
+    .tariff
+        padding-top: 50px
 
 @media (max-width: 767px)
     .tariff, .modal-wrapper
         h3
             margin-bottom: 34px
             font-size: 44px
-
-@media (max-width: 768px)
-    // h2
-    //     font-size: 54.5px
-    //     margin-bottom: 15px
+    .tariff
+        padding-top: 0
 
 @media (max-width: 476px)
     // h2
@@ -309,8 +307,6 @@ body
         &-rating
             margin-bottom: 12px
 @media (max-width: 1023px)
-    .tariff
-        padding-top: 50px
     .card
         max-width: 380px
         min-height: 470px
