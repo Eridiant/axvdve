@@ -56,7 +56,7 @@ body
         letter-spacing: .01em
         text-align: center
         margin-bottom: 10px
-        color: #272b4e
+        color: var(--color-title)
         span
             color: var(--color-gold)
     h2
@@ -64,9 +64,9 @@ body
     h2, h3
         text-align: center
         span:not(.tariff-mb)
-            color: var(--color-gold)
+            color: var(--color-card-gold-btn)
         span.tariff-mb
-            color: #272b4e
+            color: var(--color-text)
     h3, .value
         font-family: 'Oswald', sans-serif
         font-size: max(2.4vw, 47px)
@@ -199,6 +199,10 @@ body
     width: 100%
     max-width: 22vw
     min-width: 320px
+    .btn
+        color: var(--color-text)
+        &:hover
+            color: var(--color-white)
     &-wrapper
         display: none
     &-rating
@@ -219,16 +223,37 @@ body
             font-weight: 300
             margin-bottom: 0
             text-decoration: line-through
+            color: var(--color-card-text-black)
         .value
     &-solo
-        background-color: #eff0f2
+        background-color: var(--color-card-silver)
+        dd, h3
+            color: var(--color-text)
+        svg
+            color: var(--color-card-gold-btn)
     &-personal
-        background-color: var(--color-gold)
+        color: var(--color-card-text-black)
+        background-color: var(--color-card-gold-bg)
+        dd, h3
+            color: var(--color-card-text-black)
         .value, .card-rating
-            color: var(--color-white)
+            color: var(--color-silver-text)
+        .btn
+            color: var(--color-card-gold-btn)
         
     &-vip
-        &.card, &.modal-desc
+        &.card
+            color: var(--color-card-gold)
+            background-color: var(--color-card-black)
+            h3
+                color: var(--color-card-gold)
+            dd
+                color: var(--color-white)
+            .value
+                color: var(--color-gold)
+            a.btn
+                background-color: var(--color-card-gold)
+        &.modal-desc
             color: var(--color-gold)
             background-color: var(--color-card-black)
             h3
@@ -237,14 +262,16 @@ body
                 color: var(--color-white)
             .value
                 color: var(--color-gold)
+        .card-price-old
+            color: var(--color-card-silver-again)
     .btn
         width: 64%
     &.card-personal .btn
         color: var(--color-gold)
-        background-color: #1a1d34
+        background-color: var(--color-a-text-black)
         // border: 1px solid #1a1d34
         &:hover
-            color: #1a1d34
+            color: var(--color-a-text-black)
             background-color: var(--color-gold)
     .btn, a.btn
         @supports (aspect-ratio: 5 / 1)
@@ -298,7 +325,7 @@ body
 .solo .modal
     background-color: #EFF0F2
 .personal .modal
-    background-color: var(--color-gold)
+    background-color: var(--color-card-gold-bg)
 .vip .modal
     background-color: #171A27
 .modal-wrapper.solo,
@@ -351,21 +378,54 @@ body
             margin-bottom: 3vh
             color: var(--color-title)
             span
-                color: var(--color-gold)
+                color: var(--color-card-gold-btn)
+        h4
+            color: var(--color-modal-black-label-text)
+        li
+            color: var(--color-modal-black-desc)
+            span
+                color: var(--color-modal-gold-li)
+        p
+            color: var(--color-modal-black-label-text)
+            &.value
+                color: var(--color-modal-black-label-lead)
         .modal
             max-width: none
         .card-vip p
             color: var(--color-white)
         &.solo
             background: #EFF0F240
+            svg
+                color: var(--color-card-gold-btn)
+            .modal-offer span
+                color: var(--color-card-gold-lead)
         &.personal
+            color: var(--color-card-text-black)
             background: var(--color-gold-tr)
+            .modal
+                color: var(--color-card-text-black)
+                &-offer
+                    color: var(--color-modal-black-label-lead)
+                    span
+                        color: var(--color-white)
+            .value
+                color: var(--color-white)
+            p
+                color: var(--color-card-text-black)
+            h3
+                color: var(--color-card-text-black)
+            h4
+                color: var(--color-title)
         &.vip
             background: var(--color-card-black)
             .modal-close svg
                 color: var(--color-gold)
-            .modal-rate, .modal-offer, .card-price-old
+            .modal-rate, .modal-offer
                 color: #ffffff
+            .card-price-old
+                color: var(--color-modal-silver)
+            h4
+                color: var(--color-title)
     &-inner
         ul, li
             margin-left: 0
@@ -392,6 +452,8 @@ body
     &-form
         display: none
         flex: 1 1 50%
+    &-offer
+
     &-close
         position: absolute
         top: 20px
@@ -465,12 +527,11 @@ body
 @media (max-width: 1023.98px) and (min-width: 768px)
     .modal
         filter: drop-shadow(0px 0px 25px #ffffff99)
-@media (max-width: 767.98px)
     .modal-wrapper
         &.solo
             background: #eff0f2
         &.personal
-            background: var(--color-gold)
+            background: var(--color-card-gold-bg)
         &.vip
             background: var(--color-card-black)
 @media (max-width: 767.98px) and (orientation: landscape)
@@ -481,10 +542,11 @@ body
         font-family: Oswald,sans-serif !important
         font-size: max(1.27vw,25px) !important
         font-weight: 400 !important
-        color: #272A41 !important
+        color: var(--color-modal-black-label-text) !important
         background-color: var(--color-gold) !important
     a
         color: #003399 !important
+        text-decoration: underline !important
     .strwf__input-wrapper
         margin-bottom: 7px !important
     input[type=checkbox]
@@ -495,30 +557,48 @@ body
     input[type=checkbox]:checked
         color: #fff !important
         background-color: #000 !important
+    input, label
+        font-family: 'Open Sans', sans-serif !important
+        font-size: 16px !important
+        font-weight: 300 !important
+        letter-spacing: 0.05em !important
     &.script
         &-solo
             form, input, section
-                background-color: #EFF0F2 !important
+                background-color: var(--color-card-silver) !important
             input, section
-                border-color: #ffffff !important
+                color: var(--color-modal-black-input) !important
+                border-color: var(--color-modal-black-desc) !important
+            label
+                color: var(--color-modal-black-label-text) !important
+            button
+                background-color: var(--color-card-gold-bg) !important
         &-personal
             form, input, section
-                background-color: var(--color-gold) !important
+                background-color: var(--color-card-gold-bg) !important
             input
-                border-color: #272A41 !important
+                color: var(--color-card-text-black) !important
+                border-color: var(--color-modal-black-desc) !important
             button
                 color: var(--color-gold)  !important
-                background-color: #272A41 !important
+                background-color: var(--color-modal-black-submit-bg) !important
+            label
+                color: var(--color-card-text-black) !important
         &-vip
             form, input, section, select, label
                 color: #ffffff !important
                 background-color: #171A27 !important
             input
                 border-color: #FFFFFF !important
+            button
+                color: var(--color-modal-black-submit) !important
 @media (min-width: 1024px)
-    button
-        padding: 0 !important
-        @supports (aspect-ratio: 5 / 1)
-            aspect-ratio: 5 / 1
-        @supports not (aspect-ratio: 5 / 1)
-            height: 55px
+    .modal-form
+        button
+            padding: 0 !important
+            @supports (aspect-ratio: 5 / 1)
+                aspect-ratio: 5 / 1
+            @supports not (aspect-ratio: 5 / 1)
+                height: 55px
+        input, label
+            font-size: max(0.82vw, 15.5px) !important

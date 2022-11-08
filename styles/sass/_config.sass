@@ -1,21 +1,29 @@
 // USER VARIABLES SECTION
 :root
-    // --color-gold: #c5b08f
+    --color-card-gold-bg: #c9b493
     --color-card-gold: #c7ac82
+    --color-card-gold-btn: #c5b08f
+    --color-card-gold-lead: #c3a77b
+    --color-modal-gold-li: #bfa883
     --color-gold: #c4ab85
     --color-gold-tr: #c9b49350
+    --color-silver-text: #f3f3f2
+    --color-card-silver: #eff0f2
+    --color-card-silver-again: #e2e3e5
+    --color-modal-silver: #e1e2e4
     --color-white: #ffffff
     --color-text: #272b4e
     --color-title: #272b4e
     --color-text-black: #272832
     --color-card-black: #171a29
+    --color-modal-black-input: #222645
+    --color-modal-black-submit: #1d2138
+    --color-modal-black-submit-bg: #171a27
+    --color-modal-black-label-text: #272a41
+    --color-modal-black-label-lead: #262b4e
+    --color-a-text-black: #1a1d34
     --color-card-text-black: #222542
-// $accent: orange // Accent Color
-$fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
-$lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+    --color-modal-black-desc:#727379
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 30px
@@ -44,19 +52,16 @@ $gutter: $grid-gutter-width
 
 // GENERAL CSS SETTINGS
 
-::placeholder
-    color: #666
+// ::placeholder
 
-::selection
-    // background-color: $accent
-    // color: #fff
+// ::selection
 
 input, textarea
     outline: none
-    &:focus:required:invalid
-        border-color: red
-    &:required:valid
-        border-color: green
+    // &:focus:required:invalid
+        // border-color: red
+    // &:required:valid
+        // border-color: green
 
 body
     font-family: 'Open Sans', sans-serif
@@ -130,7 +135,7 @@ body
 //     h2
 //         font-size: 38px
 a
-    color: #1a1d34
+    color: var(--color-a-text-black)
     text-decoration: none
     transition: .3s
 a:not(.btn)
@@ -150,7 +155,7 @@ p, dd
     font-size: max(0.82vw, 15.5px)
     font-weight: 300
     line-height: 1.65
-    color: #727379
+    color: var(--color-modal-black-desc)
 
 dl
 dd
