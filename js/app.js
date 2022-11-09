@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
         breakpoints: {
             768: {
                 spaceBetween: 30,
-                initialSlide: 0,
+                initialSlide: 1,
             },
             300: {
                 spaceBetween: 300,
-                initialSlide: 2,
+                initialSlide: 0,
             },
         },
     });

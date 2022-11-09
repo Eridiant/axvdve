@@ -5,7 +5,7 @@
 @import 'blocks/**/*'
 
 body
-    position: relative1
+    position: relative
     width: 100vw
     height: 100vh
     min-height: 670px
@@ -207,7 +207,6 @@ body
         &:hover
             color: var(--color-white)
     &-wrapper
-        display: none
     &-rating
         display: flex
         gap: 7px
@@ -316,12 +315,16 @@ body
         &-rating
             margin-bottom: 12px
 @media (max-width: 1023px)
+@media (max-width: 1023.98px)
     .card
         max-width: 380px
         min-height: 470px
         padding: 39px 5px 50px 5px
-@media (max-width: 1023.98px)
-    .card
+        &-wrapper
+            position: absolute
+            top: 0
+            opacity: 0
+            visibility: hidden
         .btn
             max-width: 300px
 
@@ -356,7 +359,6 @@ body
     display: block
 
 .modal
-    position: relative
     display: flex
     flex-direction: column
     padding: 52px 40px 75px
@@ -372,6 +374,7 @@ body
         width: 100vw
         height: 100vh
         color: var(--color-text-black)
+        background-color: #00000040
         backdrop-filter: blur(9px)
         z-index: 100
         h3, .value
@@ -398,14 +401,14 @@ body
         .card-vip p
             color: var(--color-white)
         &.solo
-            background: #EFF0F240
+            // background: #EFF0F240
             svg
                 color: var(--color-card-gold-btn)
             .modal-offer span
                 color: var(--color-card-gold-lead)
         &.personal
             color: var(--color-card-text-black)
-            background: var(--color-gold-tr)
+            // background: var(--color-gold-tr)
             .modal
                 color: var(--color-card-text-black)
                 &-offer
@@ -421,7 +424,7 @@ body
             h4
                 color: var(--color-title)
         &.vip
-            background: var(--color-card-black)
+            // background: var(--color-card-black)
             .modal-rate, .modal-offer
                 color: #ffffff
             .card-price-old
@@ -589,6 +592,14 @@ body
                 border-color: #FFFFFF !important
             button
                 color: var(--color-modal-black-submit) !important
+@media (min-width: 471px)
+    .modal
+        position: relative
+@media (max-width: 470px)
+    .modal-wrapper .modal
+        position: static
+        &-close
+            position: fixed
 @media (min-width: 1024px)
     .modal-form
         button
