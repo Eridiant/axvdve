@@ -156,9 +156,10 @@ body
 
 @media (min-width: 1024px)
     .swiper
+        display: none
         position: absolute
         top: 0
-        visibility: hidden
+        visibility: hidten
         &-container
             margin-bottom: 5vh
     .lead
@@ -229,14 +230,14 @@ body
         .value
     &-solo
         background-color: var(--color-card-silver)
-        dd, h3
+        li, h3
             color: var(--color-text)
         svg
             color: var(--color-card-gold-btn)
     &-personal
         color: var(--color-card-text-black)
         background-color: var(--color-card-gold-bg)
-        dd, h3
+        li, h3
             color: var(--color-card-text-black)
         .value, .card-rating
             color: var(--color-silver-text)
@@ -249,7 +250,7 @@ body
             background-color: var(--color-card-black)
             h3
                 color: var(--color-card-gold)
-            dd
+            li
                 color: var(--color-white)
             .value
                 color: var(--color-gold)
@@ -260,7 +261,7 @@ body
             background-color: var(--color-card-black)
             h3
                 color: var(--color-gold)
-            dd
+            dt
                 color: var(--color-white)
             .value
                 color: var(--color-gold)
@@ -314,7 +315,6 @@ body
     .card
         &-rating
             margin-bottom: 12px
-@media (max-width: 1023px)
 @media (max-width: 1023.98px)
     .card
         max-width: 380px
@@ -324,7 +324,7 @@ body
             position: absolute
             top: 0
             opacity: 0
-            visibility: hidden
+            visibility: hidten
         .btn
             max-width: 300px
 
@@ -402,7 +402,7 @@ body
             color: var(--color-white)
         &.solo
             // background: #EFF0F240
-            svg
+            .card-rating
                 color: var(--color-card-gold-btn)
             .modal-offer span
                 color: var(--color-card-gold-lead)
@@ -592,10 +592,10 @@ body
                 border-color: #FFFFFF !important
             button
                 color: var(--color-modal-black-submit) !important
-@media (min-width: 471px)
+@media (min-width: 992px)
     .modal
         position: relative
-@media (max-width: 470px)
+@media (max-width: 991.98px)
     .modal-wrapper .modal
         position: static
         &-close
