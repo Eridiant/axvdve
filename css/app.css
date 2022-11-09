@@ -250,7 +250,7 @@ body {
     display: none;
     position: absolute;
     top: 0;
-    visibility: hidten;
+    visibility: hidden;
 }
 .swiper-container {
     margin-bottom: 5vh;
@@ -460,10 +460,11 @@ body {
     padding: 39px 5px 50px;
 }
 .card-wrapper {
+    display: none;
     opacity: 0;
     position: absolute;
     top: 0;
-    visibility: hidten;
+    visibility: hidden;
 }
 .card .btn {
     max-width: 300px;
